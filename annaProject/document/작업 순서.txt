@@ -1,0 +1,28 @@
+작업순서
+
+ A 분석 -  A.1. 업무별 정리
+             A.2. 각 업무를 작업 단위별로 세분화 (흔히 작업 단위가 작을때는 기능과 같은 것으로 오해한다.) 
+ 
+ B 설계 -  0. 작업 단위에대하여 web요청별로 세분화  
+
+             -각 web요청 별로
+             1. 화면설계 - 화면 그림 그리기
+             2. 저장설계 - ERD 작성
+             3. 운영설계 - 이용 아키텍쳐, 패턴 => class Diagram 작성
+                             (3Tier 아키텍쳐)
+                               presentaion             --->          service      --->    dataservice
+                                (MVC패턴)                          업무서비스               (DAO패턴)  
+ 
+             1.요청url과 방식? 
+             ----------------> Conroller 2. ? 
+               1.1 데이터 ?         |
+                                       |    2.1 ?  Model(VO) 등
+		              |
+                                    View 3 ? 
+                               
+ C 구현 -   1. ERD보고                                            -> DB구축
+              2. 화면 그림+class Diagram 의 (2.1, 3) 보고   -> View (jsp) 작성
+              3. Class  Diagram 보고                             -> class  작성 
+                                                                           (VO, DAO, 업무서비스, Contorller의 Handler ) 
+
+ D 테스트-기능별 테스트 -> 업무별 테스트 -> 통합 테스트
